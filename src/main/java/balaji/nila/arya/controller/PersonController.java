@@ -1,6 +1,5 @@
 package balaji.nila.arya.controller;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 
 import org.apache.commons.logging.Log;
@@ -31,6 +30,7 @@ public class PersonController {
 		Iterable<Person> persons = null;
 		try {
 			persons = this.personService.listPersons();
+			persons.forEach(System.out::println);
 			log.info(dt + " : Retrieved listPersons - " + persons.toString());
 		} catch (Exception ex) {
 			log.info("Exception : " + ex);
